@@ -9,17 +9,7 @@
 <body>
   <div class="container">
     <h1>Library Catalog</h1>
-
-    <form id="bookForm">
-      <input type="text" id="title" placeholder="Book Title" required />
-      <input type="text" id="author" placeholder="Author" required />
-      <input type="number" id="pages" placeholder="Pages" required min="1" />
-      <label class="checkbox">
-        <input type="checkbox" id="read" />
-        Mark as Read
-      </label>
-      <button type="submit">Add Book</button>
-    </form>
+    <button id="openModalBtn">+ New Book</button>
 
     <h2>Books in Library</h2>
     <table id="bookTable">
@@ -34,6 +24,20 @@
       </thead>
       <tbody></tbody>
     </table>
+  </div>
+
+  <!-- Modal -->
+  <div id="bookModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Add a New Book</h2>
+      <form id="bookForm">
+        <input type="text" id="title" placeholder="Book Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <input type="number" id="pages" placeholder="Pages" required min="1" />
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
   </div>
 
   <script src="script.js"></script>
